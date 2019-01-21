@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>isPrimes</title>
+</head>
+<body>
+<script>
+    var numberN1 = parseInt(prompt("in put a number "));
+    for (var numberN = 0; numberN < numberN1; numberN++) {
+        var flag = true;
+        if (numberN < 2) {
+            flag = false
+        }
+        for (var i = 2; i < numberN; i++) {
+            if (numberN % i === 0) {
+                flag = false
+            }
+        }
+        if (numberN === 2) {
+            flag = true
+        }
+        if (numberN === 3) {
+            flag = true
+        }
+        if (flag === true) {
+            document.write(numberN + '<br/>')
+        }
+    }
+</script>
+</body>
+</html>
